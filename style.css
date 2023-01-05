@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand&display=swap');
 /* Settings padrão */
 *{
     margin:0;
     padding:0;
+    font-family: 'Press Start 2P', cursive;
+}
+:root{
+    --title-color: rgba(42, 255, 53, 0.5);
+    --primary: hsla(130, 100%, 50%, 0.75);
 }
 body{
     background-image: url(imgs/milky.jpg);
@@ -9,20 +15,54 @@ body{
     background-repeat:no-repeat;
     background-color:rgb(2, 2, 12);
 }
-
-/* ========================================== */
-
-/* cabeçalho */
-header{
-    padding:20px;
-}
-/* título e animação */
-header>h1{
-    font-family: 'Press Start 2P', cursive;
-    font-size:35px;
+h1.text-shine{
+    font-size:30px;
     text-align: center;
     opacity: 0.9;
-    color:rgba(42, 255, 53, 0.5);
+    color:var(--title-color);
+    margin: 40px 0 20px;
+}
+body>p{
+    font-size: 11px;
+    line-height: 15px;
+    width:350px;
+    margin: 0 auto;
+    text-align: center;
+    color:var(--primary);
+}
+#div-nasa{
+    width:330px;
+    margin: 30px auto;
+    border-radius: 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 0 0.7em var(--primary);
+    background-color: rgba(51, 51, 51, 0.3);
+    text-align: center;
+    color:var(--primary);
+}
+#div-nasa>img{
+    width:100%;
+    box-shadow: 0 0 0.7em var(--primary);
+}
+#div-nasa>p,h1{
+    margin: 15px 10px;
+}
+#div-nasa>p{
+    font-size: 10px;
+    line-height: 13px;
+}
+#div-nasa>p.description{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: 13px;
+}
+#div-nasa>h1{
+    font-size: 13px;
+}
+/* ====================== */
+
+.text-shine{
     -webkit-animation: glow 2s ease-in-out infinite alternate;
     -moz-animation: glow 2s ease-in-out infinite alternate;
     animation: glow 2s ease-in-out infinite alternate;
@@ -33,148 +73,5 @@ header>h1{
     }
     to {
       text-shadow: 0 0 10px rgba(76, 255, 76, 0.726), 0 0 20px rgba(131, 255, 109, 0.815), 0 0 30px #5dff5db7;
-    }
-}
-/* navegação */
-nav{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    margin:10px;
-}
-header ul{
-    display:flex;
-    list-style-type: none;
-    align-items: center;
-}
-header li{
-    font-family: 'Press Start 2P', cursive;
-    opacity: 0.7;
-    color:rgb(51, 255, 51);
-    font-size:10px;
-    margin:0 10px;
-}
-a{
-    text-decoration: none;
-    color:inherit;
-}
-/* atalho home */
-header>a>img{
-    background-color: rgb(51, 255, 51);
-    border-radius: 8px;
-    position: absolute;
-    right:30px;
-}
-header>a{
-    position: absolute;
-    z-index:10;
-    right:30px;
-}
-/* media */
-@media screen and (max-width:600px){
-    header>h1{
-        font-size:20px;
-    }
-    header li{
-        font-size:8px;
-    }
-    header>a>img{
-        height:20px;
-        border-radius: 5px;
-        right:10px;
-    }
-    header>a{
-        right:10px;
-    }
-}
-
-/* ========================================== */
-
-/* introdução */
-section>p{
-    text-align:center;
-    color:rgb(51, 255, 51);
-    font-family: 'Press Start 2P', cursive;
-    width:20%;
-    margin: 15px auto 50px;
-    font-size:10px;
-    line-height:15px;
-}
-@media screen and (min-width:801px) and (max-width:1000px){
-    section>p{
-        width: 30%;
-    }
-}
-@media screen and (min-width:525px) and (max-width:800px){
-    section>p{
-        width: 40%;
-    }
-}
-@media screen and (min-width:0px) and (max-width:524px){
-    section>p{
-        width: 60%;
-    }
-}
-
-/* ========================================== */
-
-/* FOTO DO DIA NASA */
-article{
-    max-width:400px;
-    display:flex;
-    margin:0 auto;
-    border-radius:30px;
-    flex-direction:column;
-    align-items: center;
-    border:4px solid;
-    border-color:rgb(51, 255, 51);
-    color:white;
-    text-align: center;
-}
-article>img{
-    width:100%;
-    border-top-left-radius:30px;
-    border-top-right-radius:30px;
-    display:block;
-    margin:0 auto;
-    border-bottom:4px solid;
-    border-color:rgb(51, 255, 51);
-}
-article>.data_{
-    font-family:monospace;
-    margin:5px;
-}
-article>.tit_{
-    font-family:monospace;
-    margin:0 10px 5px;
-}
-article>.expla{
-    font-family:monospace;
-    margin:0 20px 10px;
-}
-article>.cr_{
-    margin:0 20px 5px;
-    color:rgb(153, 255, 153);
-}
-/* media */
-@media screen and (max-width:470px){
-    article{
-        width:75%;
-    }
-}
-
-/* ========================================== */
-
-/* footer */
-footer{
-    font-family: 'Press Start 2P', cursive;
-    color:rgb(51, 255, 51);
-    text-align:center;
-    font-size:8px;
-    margin:50px 10px 10px;
-}
-@media screen and (max-width:350px){
-    footer{
-        font-size:6px;
     }
 }
