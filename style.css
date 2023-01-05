@@ -37,13 +37,14 @@ body>p{
     box-sizing: border-box;
     overflow: hidden;
     box-shadow: 0 0 0.7em var(--primary);
-    background-color: rgba(51, 51, 51, 0.3);
+    background-color: rgba(50, 50, 50, 0.4);
     text-align: center;
     color:var(--primary);
 }
 #div-nasa>img{
     width:100%;
     box-shadow: 0 0 0.7em var(--primary);
+    cursor: pointer;
 }
 #div-nasa>p,h1{
     margin: 15px 10px;
@@ -59,6 +60,31 @@ body>p{
 }
 #div-nasa>h1{
     font-size: 13px;
+}
+#foto-grande{
+    top:0px;
+    position:fixed;
+    width:100%;
+    height:100%;
+    background-color: rgba(50, 50, 50, 0.4);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#foto-grande>img{
+    max-width:75%;
+    max-height:80%;
+    border-radius: 10px;
+    box-shadow: 0 0 0.5em var(--primary);
+}
+#foto-grande>p{
+    color:white;
+    text-decoration: underline;
+    margin: 0 0 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    cursor: pointer;
 }
 /* ====================== */
 
