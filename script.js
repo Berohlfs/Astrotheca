@@ -14,7 +14,7 @@ function carregar() {
             `
             <img src="${data.url}" onclick="toggle()" alt="imagem do dia NASA">
             <p>${data.date}</p>
-            <h1>${data.title}</h1>
+            <h2>${data.title}</h1>
             <p class="description">${data.explanation}</p>
             <p>Autor: ${data.copyright}</p>
             `;

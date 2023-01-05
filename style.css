@@ -15,12 +15,13 @@ body{
     background-repeat:no-repeat;
     background-color:rgb(2, 2, 12);
 }
-h1.text-shine{
+h1{
     font-size:30px;
     text-align: center;
     opacity: 0.9;
     color:var(--title-color);
     margin: 40px 0 20px;
+    text-shadow: 0 0 10px rgb(117, 255, 117);
 }
 body>p{
     font-size: 11px;
@@ -46,7 +47,7 @@ body>p{
     box-shadow: 0 0 0.7em var(--primary);
     cursor: pointer;
 }
-#div-nasa>p,h1{
+#div-nasa>p,h2{
     margin: 15px 10px;
 }
 #div-nasa>p{
@@ -58,7 +59,7 @@ body>p{
     font-weight: bolder;
     font-size: 13px;
 }
-#div-nasa>h1{
+#div-nasa>h2{
     font-size: 13px;
 }
 #foto-grande{
@@ -87,17 +88,3 @@ body>p{
     cursor: pointer;
 }
 /* ====================== */
-
-.text-shine{
-    -webkit-animation: glow 2s ease-in-out infinite alternate;
-    -moz-animation: glow 2s ease-in-out infinite alternate;
-    animation: glow 2s ease-in-out infinite alternate;
-}
-@-webkit-keyframes glow {
-    from {
-      text-shadow: 0 0 10px rgb(117, 255, 117), 0 0 20px rgb(122, 255, 95), 0 0 30px #4bff4bb6;
-    }
-    to {
-      text-shadow: 0 0 10px rgba(76, 255, 76, 0.726), 0 0 20px rgba(131, 255, 109, 0.815), 0 0 30px #5dff5db7;
-    }
-}
