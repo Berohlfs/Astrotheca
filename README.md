@@ -1,7 +1,7 @@
-# TicTacToe
-Neste repositório, encontra-se o código-fonte utilizado para criação de um **Jogo Da Velha**!
+# Astrotheca
+Neste repositório, encontra-se o código-fonte utilizado para a criação de um website com API Request da NASA!
  
- [Clique aqui para jogar!](https://berohlfs.github.io/TicTacToe/)
+ [Clique aqui para acessar o Astrotheca!](https://berohlfs.github.io/Astrotheca/)
  
  Técnologias utilizadas:
  - [x] CSS
