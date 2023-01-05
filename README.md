@@ -1,5 +1,5 @@
 # Astrotheca
-Neste repositório, encontra-se o código-fonte utilizado para a criação de um website com API Request da NASA!
+Neste repositório, encontra-se o código-fonte utilizado para a criação de um website desenvolvido com a API Request da NASA!
  
  [Clique aqui para acessar o Astrotheca!](https://berohlfs.github.io/Astrotheca/)
  
