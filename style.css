@@ -74,8 +74,8 @@ body>p{
     flex-direction: column;
 }
 #foto-grande>img{
-    max-width:75%;
-    max-height:80%;
+    max-width:95%;
+    max-height:90%;
     border-radius: 10px;
     box-shadow: 0 0 0.5em var(--primary);
 }
