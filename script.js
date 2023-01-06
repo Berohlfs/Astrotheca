@@ -26,7 +26,6 @@ xhr.onload = function () {
 xhr.open('GET', 'https://api.nasa.gov/planetary/apod?api_key=rF7vbgi86OEdn4j7aVureGB8bDzcO5Y7dDhWrQ7E');
 xhr.send();
 
-
 function toggle(){
     if(zoom.style.display == 'none'){
         zoom.style.display = 'flex';
