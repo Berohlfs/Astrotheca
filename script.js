@@ -1,36 +1,34 @@
-var card = document.getElementById('div-nasa');
-var zoom = document.getElementById('foto-grande');
-zoom.style.display = 'none';
-var xhr = new XMLHttpRequest();
+const CARD = document.getElementById('div-nasa');
+const ZOOM = document.getElementById('foto-grande');
+ZOOM.style.display = 'none'
 
-xhr.onload = function () {
+const resNasa = async ()=>{
+    try{
+        const res = await fetch(`https://api.nasa.gov/planetary/apod?api_key=rF7vbgi86OEdn4j7aVureGB8bDzcO5Y7dDhWrQ7E`)
+        const data = await res.json()
 
-    let data = JSON.parse(this.responseText);
-
-    card.innerHTML =
+        CARD.innerHTML =
         `
-        <img src="${data.url}" onclick="toggle()" alt="imagem do dia NASA">
-        <p>${data.date}</p>
-        <h2>${data.title}</h1>
-        <p class="description">${data.explanation}</p>
-        <p>Autor: ${data.copyright}</p>
-        `;
-
-    zoom.innerHTML =
+            <img src="${data.url}" onclick="toggle()" alt="imagem do dia NASA">
+            <p>${data.date}</p>
+            <h2>${data.title}</h1>
+            <p class="description">${data.explanation}</p>
+            <p>Autor: ${data.copyright}</p>
         `
-        <p onclick="toggle()">Voltar</p>
-        <img src="${data.url}" alt="imagem do dia NASA">
-        `;
+        ZOOM.innerHTML =
+        `
+            <p onclick="toggle()">Voltar</p>
+            <img src="${data.url}" alt="imagem do dia NASA">
+        `
+
+    }catch(erro){
+        alert('NASA API fora do ar.')
+        console.log(erro)
+    }    
 }
 
-xhr.open('GET', 'https://api.nasa.gov/planetary/apod?api_key=rF7vbgi86OEdn4j7aVureGB8bDzcO5Y7dDhWrQ7E');
-xhr.send();
+resNasa()
 
 function toggle(){
-    if(zoom.style.display == 'none'){
-        zoom.style.display = 'flex';
-    }
-    else{
-        zoom.style.display = 'none';
-    }
+    ZOOM.style.display == 'none' ? ZOOM.style.display = 'flex' : ZOOM.style.display = 'none'
 }
